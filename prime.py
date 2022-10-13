@@ -1,11 +1,7 @@
-num = 17
-x = 0
-if num > 1:
-    for i in range(2, num):
-        if (num % i) == 0:
-            x += 1
-            break
-if x:
-    print(num, "is not a prime number")
-else:
-    print(num, "is a prime number")
+#!/usr/bin/env python
+class JavaInUse(object):
+    """ generated source for class JavaInUse """
+    @classmethod
+    def main(cls, args):
+        """ generated source for method main """
+        print "Hello JavaInUse"
