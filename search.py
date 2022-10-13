@@ -1,35 +1,18 @@
-Linear Search:
-
-def linear(arr, x):
-    for i in range(len(arr)):
-        if arr[i] == x:
-            return i
-    return -1
-
-arr = ['a','b','c','d','e']
-x='d'
-print("element found at "+str(linear(arr, x)))
-
-Binary Search:
-
-def binary(arr, low, high, x):
-    if high >= low:
-        mid = (high + low) // 2
-
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] > x:
-            return binary(arr, low, mid-1, x)
-        elif arr[mid] < x:
-            return binary(arr, mid+1, high, x)
-    else:
-        return -1
-arr = [21,43,5,76,34,12,2,47]
-x = 76
-
-ans = binary(arr, 0, len(arr)-1, x)
-
-if ans != -1:
-    print("element is at ", str(ans))
-else:
-    print("element not found")
+def linear_Search(list1, n, key):  
+  
+    # Searching list1 sequentially  
+    for i in range(0, n):  
+        if (list1[i] == key):  
+            return i  
+    return -1  
+  
+  
+list1 = [1 ,3, 5, 4, 7, 9]  
+key = 7  
+  
+n = len(list1)  
+res = linear_Search(list1, n, key)  
+if(res == -1):  
+    print("Element not found")  
+else:  
+    print("Element found at index: ", res)  
