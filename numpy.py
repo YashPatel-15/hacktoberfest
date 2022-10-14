@@ -1,6 +1,9 @@
-import numpy as np					#import numpy library
-height = [180,215,176,150,181,209]			#define list
-np_height = np.array(height)
-print(np_height)						#print value
-np_height_m = np_height * 0.0254
-print(np_height_m)
+import numpy as np  
+x = np.arange(12).reshape(3,2,2).swapaxes(1,2)  
+x  
+y=np.ravel(a, order='C')  
+y  
+z=np.ravel(a, order='K')  
+z  
+q=np.ravel(a, order='A')  
+q  
