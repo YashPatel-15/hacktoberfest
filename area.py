@@ -1,30 +1,34 @@
-import math
+import java.util.Scanner;
 
-print("**********Choose an Option:********* ");
-print("1: Area of the Circle");
-print("2: Area of the Rectangle ");
-print("3: Area of the Triangle ");
-
-
-choice = int(input(""))
-
-
-if choice==1:
-
-    radius = float(input("Enter the radius of the Circle: "))
-    area = math.pi*pow(radius,2)
-    print(f"The area of the circle with radius {radius} is : {round(area,2)}")
-
-
-if choice==2:
-    width =float(input("Enter the width of the rectangle: "))
-    length = float(input("Enter the length of the rectangle: "))
-    area = width*length
-    print(f"The area of the ractangle is {round(area,2)}")
-
-
-if choice ==3:
-    a, b , c = map(float, input("Enter the 3 sides of triangle eg (12 13 14):").split())
-    s= (a+b+c)/2
-    area = math.sqrt(s*(s-a)*(s-b)*(s-c))
-    print(f"The area of the triangle is {round(area,2)}")
+class BubbleSortExample {
+  public static void main(String []args) {
+    int num, i, j, temp;
+    Scanner input = new Scanner(System.in);
+ 
+    System.out.println("Enter the number of integers to sort:");
+    num = input.nextInt();
+ 
+    int array[] = new int[num];
+ 
+    System.out.println("Enter " + num + " integers: ");
+ 
+    for (i = 0; i < num; i++) 
+      array[i] = input.nextInt();
+ 
+    for (i = 0; i < ( num - 1 ); i++) {
+      for (j = 0; j < num - i - 1; j++) {
+        if (array[j] > array[j+1]) 
+        {
+           temp = array[j];
+           array[j] = array[j+1];
+           array[j+1] = temp;
+        }
+      }
+    }
+ 
+    System.out.println("Sorted list of integers:");
+ 
+    for (i = 0; i < num; i++) 
+      System.out.println(array[i]);
+  }
+}
