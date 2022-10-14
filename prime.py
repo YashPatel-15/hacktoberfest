@@ -1,7 +1,14 @@
-#!/usr/bin/env python
-class JavaInUse(object):
-    """ generated source for class JavaInUse """
-    @classmethod
-    def main(cls, args):
-        """ generated source for method main """
-        print "Hello JavaInUse"
+
+def weeklyPaid(hours_worked, wage):
+    if hours_worked > 40:
+        return 40 * wage + (hours_worked - 40) * wage * 1.5
+    else:
+        return hours_worked * wage
+ 
+ 
+hours_worked = 50
+wage = 100
+ 
+pay = weeklyPaid(hours_worked, wage)
+ 
+print(f"Total gross pay: Rs.{pay:.2f} ")
